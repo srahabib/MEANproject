@@ -1,0 +1,19 @@
+<nav>
+  <div class="search-bar">
+    <form class="search">
+      <input
+        #s
+        (keyup.enter)="search(s.value)"
+        type="text"
+        class="search__input"
+        placeholder="Search Recipe, Profile or Ingredients"
+        onload="equalWidth()"
+        required
+      />
+      <button (click)="search(s.value)" formnovalidate class="search__btn">
+        Search
+      </button>
+      <i class="ion-ios-search search__icon"></i>
+    </form>
+  </div>
+</nav>

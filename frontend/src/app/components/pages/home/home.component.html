@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- main heading font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="home">
+      <h1 class="homepage-heading">PostPost</h1>
+      <p class="phoneview-p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque amet
+        dolore quidem obcaecati, reiciendis, ipsam enim perspiciatis et, placeat
+        rem quia itaque quod dolorum voluptas quam? Ea quam maxime ipsa?
+      </p>
+      <app-search></app-search>
+      <!-- <nav>
+        <div class="search-bar">
+          <form class="search">
+            <input
+              type="search"
+              class="search__input"
+              name="search"
+              placeholder="Search Recipe, Profile or Ingredients"
+              onload="equalWidth()"
+              required
+            />
+            <button formnovalidate class="search__btn">Search</button>
+            <i class="ion-ios-search search__icon"></i>
+          </form>
+        </div>
+      </nav> -->
+    </div>
+
+    <div class="section-heading">
+      <h1 class="fancy">EXPLORE</h1>
+    </div>
+    <!---------------------------- Photo Grid Desktop View Starts Here  ----------------------------------->
+    <div class="gallery">
+      <div class="y" *ngFor="let _ of [].constructor(4)">
+        <div class="image-box" *ngFor="let food of foods">
+          <a routerLink="/food/{{ food.id }}">
+            <img [src]="food.imageUrl" [alt]="food.name" />
+            <div class="box-content">
+              <div class="box-content__upper">
+                <div class="food-name">{{ food.name }}</div>
+                <div class="icon--likes">
+                  <i class="fa fa-heart"></i>
+                  <p>682</p>
+                </div>
+                <div class="icon--add">
+                  <i class="fa fa-plus"></i>
+                </div>
+              </div>
+              <div class="box-content__lower">
+                <div class="user">
+                  <div class="user__avatar">
+                    <img src="img/colette.jpg" alt="" />
+                  </div>
+                  <div class="user__name"><p>Christine Danial</p></div>
+                </div>
+              </div>
+              <div class="btm-r8">
+                <div class="icon--download">
+                  {{ food.price | currency }}
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="image-box" *ngFor="let food of foods">
+        <div class="image-container">
+          <img [src]="food.imageUrl" [alt]="food.name" />
+        </div>
+        <div class="box-content">
+          <div class="box-content__upper">
+            <div class="food-name">{{ food.name }}</div>
+            <div class="icon--likes">
+              <i class="fa fa-heart"></i>
+              <p>682</p>
+            </div>
+            <div class="icon--add">
+              <i class="fa fa-plus"></i>
+            </div>
+          </div>
+          <div class="box-content__lower">
+            <div class="user">
+              <div class="user__avatar">
+                <img src="img/colette.jpg" alt="" />
+              </div>
+              <div class="user__name"><p>Christine Danial</p></div>
+            </div>
+          </div>
+          <div class="btm-r8">
+            <div class="icon--download">
+              {{ food.price | currency }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="container">
+      <div class="image-container">
+        <img
+          *ngFor="let food of foods"
+          [src]="food.imageUrl"
+          [alt]="food.name"
+        />
+      </div>
+    </div> -->
+  </body>
+</html>
