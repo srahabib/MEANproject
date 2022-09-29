@@ -50,72 +50,41 @@
     </div>
     <!---------------------------- Photo Grid Desktop View Starts Here  ----------------------------------->
     <div class="gallery">
-      <div class="y" *ngFor="let _ of [].constructor(4)">
-        <div class="image-box" *ngFor="let food of foods">
-          <a routerLink="/food/{{ food.id }}">
-            <img [src]="food.imageUrl" [alt]="food.name" />
-            <div class="box-content">
-              <div class="box-content__upper">
-                <div class="food-name">{{ food.name }}</div>
-                <div class="icon--likes">
-                  <i class="fa fa-heart"></i>
-                  <p>682</p>
-                </div>
-                <div class="icon--add">
-                  <i class="fa fa-plus"></i>
-                </div>
-              </div>
-              <div class="box-content__lower">
-                <div class="user">
-                  <div class="user__avatar">
-                    <img src="img/colette.jpg" alt="" />
+      <div class="y" *ngFor="let col of [0, 1, 2, 3]">
+        <ng-container *ngFor="let food of foods; let i = index">
+          <div class="image-box" *ngIf="(i - col) % 4 == 0">
+            <a routerLink="/food/{{ food.id }}">
+              <img [src]="food.imageUrl" [alt]="food.name" />
+              <div class="box-content">
+                <div class="box-content__upper">
+                  <div class="food-name">{{ food.name }}</div>
+                  <div class="icon--likes">
+                    <i class="fa fa-heart"></i>
+                    <p>682</p>
                   </div>
-                  <div class="user__name"><p>Christine Danial</p></div>
+                  <div class="icon--add">
+                    <i class="fa fa-plus"></i>
+                  </div>
+                </div>
+                <div class="box-content__lower">
+                  <div class="user">
+                    <div class="user__avatar">
+                      <img src="img/colette.jpg" alt="" />
+                    </div>
+                    <div class="user__name"><p>Christine Danial</p></div>
+                  </div>
+                </div>
+                <div class="btm-r8">
+                  <div class="icon--download">
+                    {{ food.price | currency }}
+                  </div>
                 </div>
               </div>
-              <div class="btm-r8">
-                <div class="icon--download">
-                  {{ food.price | currency }}
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        </ng-container>
       </div>
     </div>
-
-    <!-- <div class="container">
-      <div class="image-box" *ngFor="let food of foods">
-        <div class="image-container">
-          <img [src]="food.imageUrl" [alt]="food.name" />
-        </div>
-        <div class="box-content">
-          <div class="box-content__upper">
-            <div class="food-name">{{ food.name }}</div>
-            <div class="icon--likes">
-              <i class="fa fa-heart"></i>
-              <p>682</p>
-            </div>
-            <div class="icon--add">
-              <i class="fa fa-plus"></i>
-            </div>
-          </div>
-          <div class="box-content__lower">
-            <div class="user">
-              <div class="user__avatar">
-                <img src="img/colette.jpg" alt="" />
-              </div>
-              <div class="user__name"><p>Christine Danial</p></div>
-            </div>
-          </div>
-          <div class="btm-r8">
-            <div class="icon--download">
-              {{ food.price | currency }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <!-- <div class="container">
       <div class="image-container">
