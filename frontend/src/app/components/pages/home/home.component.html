@@ -48,6 +48,11 @@
     <div class="section-heading">
       <h1 class="fancy">EXPLORE</h1>
     </div>
+    <app-tags></app-tags>
+    <app-not-found
+      [visible]="!foods || !foods.length"
+      resetLinkText="Reset Search"
+    ></app-not-found>
     <!---------------------------- Photo Grid Desktop View Starts Here  ----------------------------------->
     <div class="gallery">
       <div class="y" *ngFor="let col of [0, 1, 2, 3]">

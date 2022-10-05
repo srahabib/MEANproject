@@ -1,4 +1,4 @@
-Sprints full-stack Final Project
+# Sprints full-stack Final Project
 
 ## Header
 
@@ -35,8 +35,34 @@ Sprints full-stack Final Project
 5. show tag result in Home component
 6. Generate Tags component [add to home comp , ts, html ,css ]
 
+## Food Page (might change this to a pop up later)
+
+1. add method to food service
+2. Generate Food Page Component
+3. Add [Route , ts , html , css]
+
+## Cart Page
+
+1. create cart item model
+2. create cart model
+3. generate cart service
+4. Add to cart button in food page
+5. generate cart page component [Route , ts , html , css]
+
+## Not Found!
+
+1. Generate Component [ts , html, css]
+2. Add to pages [home , food , cart]
+
 ## changes and to do to the original html (29/9/2022)
 
-1. change from flex to pure html and css
-2. responsive search bar
-3. alter media queries
+1. nest loops on gallery html to achieve desired behaviour (Desktop view)
+2. do the same for both mobile and tablet view
+3. responsive search bar
+4. alter media queries
+
+# connecting to backend
+
+1. create backend folder
+2. create tsconfig.json
+3. create .gitignore
