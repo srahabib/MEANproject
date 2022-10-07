@@ -66,3 +66,10 @@
 1. create backend folder
 2. create tsconfig.json
 3. create .gitignore
+4. Add httpClient module
+
+## login page
+
+1. generate component
+2. [add to routes , ts , html , import reactive forms module]
+3. Add login Api [json , jsonwebtoken , test using postman]

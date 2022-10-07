@@ -27,22 +27,6 @@
         rem quia itaque quod dolorum voluptas quam? Ea quam maxime ipsa?
       </p>
       <app-search></app-search>
-      <!-- <nav>
-        <div class="search-bar">
-          <form class="search">
-            <input
-              type="search"
-              class="search__input"
-              name="search"
-              placeholder="Search Recipe, Profile or Ingredients"
-              onload="equalWidth()"
-              required
-            />
-            <button formnovalidate class="search__btn">Search</button>
-            <i class="ion-ios-search search__icon"></i>
-          </form>
-        </div>
-      </nav> -->
     </div>
 
     <div class="section-heading">
@@ -52,7 +36,8 @@
     <app-not-found
       [visible]="!foods || !foods.length"
       resetLinkText="Reset Search"
-    ></app-not-found>
+    >
+    </app-not-found>
     <!---------------------------- Photo Grid Desktop View Starts Here  ----------------------------------->
     <div class="gallery">
       <div class="y" *ngFor="let col of [0, 1, 2, 3]">
@@ -90,15 +75,5 @@
         </ng-container>
       </div>
     </div>
-
-    <!-- <div class="container">
-      <div class="image-container">
-        <img
-          *ngFor="let food of foods"
-          [src]="food.imageUrl"
-          [alt]="food.name"
-        />
-      </div>
-    </div> -->
   </body>
 </html>
